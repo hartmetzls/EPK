@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hartmetz.epk.EPK">
+
+    <!--Keeps Studio from giving error re a lack of Content Description. Content description is
+    unecessary in this code.-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/MountainImgByFrank"
+        android:scaleType="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEARTMEAT"
+        android:paddingTop="5dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:textSize="33sp"
+        android:id="@+id/HEARTMEAT"
+        android:textColor="@android:color/black"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_marginTop="19dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/imageAndDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_aligntoRightOf="id/HEARTMEAT"
+            android:layout_weight="1"
+            android:text="We are a band that plays super cool music! Started with the dynamic duo Frank Storey on guitar and Lilly Hartmetz on vocals and now has the wonderful addition of James Rios on bass. All songs are original. All songs are heartfelt."
+            android:padding="20dp"
+            android:textSize="15sp"
+            android:id="@+id/description"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true" />
+
+        <ImageView
+            android:id="@+id/bandpic"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:src="@drawable/heartmeat_at_iota"
+            android:layout_marginTop="id/HEARTMEAT"
+            android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    <!--Resources:-->
+<!--https://stackoverflow.com/questions/3496269/how-do-i-put-a-border-around-an-android-textview-->
+<!--https://stackoverflow.com/questions/37661713/how-to-turn-off-auto-indenting-in-java-in-
+        android-studio-2-1-1-windows-7-->
+<!--https://stackoverflow.com/questions/4792260/how-do-you-change-text-to-bold-in-android-->
+
+    </RelativeLayout>
