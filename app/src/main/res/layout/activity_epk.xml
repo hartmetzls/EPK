@@ -5,15 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hartmetz.epk.EPK">
-
-    <!--Keeps Studio from giving error re a lack of Content Description. Content description is
-    unecessary in this code.-->
+    tools:context="com.example.hartmetz.epk.EPK"
+    tools:ignore="HardcodedText">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/MountainImgByFrank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mountain_image_by_frank"
         android:scaleType="center" />
 
     <TextView
@@ -30,71 +28,72 @@
         android:background="@drawable/border"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="1dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/imageButtonsAndDescription"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_aligntoRightOf="id/HEARTMEAT"
-        android:text="We are a band that plays super cool music! Started with the dynamic duo Frank Storey on guitar and Lilly Hartmetz on vocals and now has the wonderful addition of James Rios on bass. All songs are original. All songs are heartfelt."
-        android:padding="20dp"
-        android:textSize="16sp"
-        android:id="@+id/description"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@android:color/black"
-        android:layout_toRightOf="@+id/bandpic"
-        android:layout_toEndOf="@+id/bandpic"
-        android:layout_below="@+id/HEARTMEAT" />
-
-    <ImageView
-        android:id="@+id/bandpic"
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:src="@drawable/heartmeat_at_iota"
         android:layout_below="@+id/HEARTMEAT"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="7dp"
-        android:paddingLeft="15dp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/SONGS"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="SONGS"
-        android:layout_marginLeft="51dp"
-        android:layout_marginStart="51dp"
-        android:layout_below="@+id/description"
-        android:layout_alignLeft="@+id/CONTACT"
-        android:layout_alignStart="@+id/CONTACT" />
+        <LinearLayout
+            android:id="@+id/imageAndButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <Button
-        android:id="@+id/VIDEOS"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="VIDEOS"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/SONGS"
-        android:layout_alignLeft="@+id/SONGS"
-        android:layout_alignStart="@+id/SONGS" />
+            <ImageView
+                android:id="@+id/bandpic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/heartmeat_at_iota"
+                android:paddingLeft="5dp" />
+
+            <Button
+                android:id="@+id/SONGS"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="SONGS"
+                android:layout_margin="5dp"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/VIDEOS"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="VIDEOS"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:text="We are a band that plays super cool music! Started with the dynamic duo Frank Storey on guitar and Lilly Hartmetz on vocals and now has the wonderful addition of James Rios on bass. All songs are original. All songs are heartfelt."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONTACT INFO
-        sexauerfl@gmail.com
-        757.903.9289
-        https://www.facebook.com/Heartmeat/
-        1060 W Addison St, Chicago, IL 60613"
+        android:text="CONTACT INFO\n\nsexauerfl@gmail.com\n757.903.9289\nhttps://www.facebook.com/Heartmeat\n1060 W Addison St, Chicago, IL 60613"
         android:padding="20dp"
         android:textSize="18sp"
         android:id="@+id/CONTACT"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
 
 <!--Resources:-->
 <!--https://stackoverflow.com/questions/3496269/how-do-i-put-a-border-around-an-android-textview-->
@@ -102,5 +101,6 @@
         android-studio-2-1-1-windows-7-->
 <!--https://stackoverflow.com/questions/4792260/how-do-you-change-text-to-bold-in-android-->
 <!--https://developer.android.com/reference/android/widget/Button.html-->
+<!--https://stackoverflow.com/questions/5382490/how-to-add-a-line-break-in-an-android-textview-->
 
     </RelativeLayout>
