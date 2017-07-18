@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hartmetz.epk.EPK"
-    tools:ignore="HardcodedText">
+    tools:ignore="HardcodedText" >
 
     <ImageView
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center" >
 
             <ImageView
                 android:id="@+id/bandpic"
@@ -80,7 +80,7 @@
             android:padding="15dp"
             android:text="We are a band that plays super cool music! Started with the dynamic duo Frank Storey on guitar and Lilly Hartmetz on vocals and now has the wonderful addition of James Rios on bass. All songs are original. All songs are heartfelt."
             android:textColor="@android:color/black"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 
