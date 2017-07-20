@@ -32,68 +32,80 @@
         android:layout_alignParentTop="true" />
 
     <LinearLayout
-        android:id="@+id/imageButtonsAndDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/HEARTMEAT"
-        android:layout_margin="10dp"
-        android:orientation="horizontal" >
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/HEARTMEAT" >
 
         <LinearLayout
-            android:id="@+id/imageAndButtons"
+            android:id="@+id/imageButtonsAndDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center" >
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_weight="5" >
 
-            <ImageView
-                android:id="@+id/bandpic"
+            <LinearLayout
+                android:id="@+id/imageAndButtons"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:src="@drawable/heartmeat_at_iota"
-                android:paddingLeft="5dp" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" >
 
-            <Button
-                android:id="@+id/SONGS"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/songs_button"
-                android:layout_margin="5dp"
-                android:gravity="center" />
+                <ImageView
+                    android:id="@+id/bandpic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/heartmeat_at_iota"
+                    android:paddingLeft="5dp" />
 
-            <Button
-                android:id="@+id/VIDEOS"
-                android:layout_height="wrap_content"
+                <Button
+                    android:id="@+id/SONGS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/songs_button"
+                    android:layout_margin="5dp"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/VIDEOS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/videos_button"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
                 android:layout_width="wrap_content"
-                android:text="@string/videos_button"
-                android:layout_margin="5dp" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:padding="15dp"
+                android:text="@string/description"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
 
         </LinearLayout>
 
         <TextView
-            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif-light"
-            android:padding="15dp"
-            android:text="@string/description"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:layout_weight="3"
+            android:text="@string/contact_info"
+            android:padding="20dp"
+            android:textSize="10sp"
+            android:id="@+id/CONTACT"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_info"
-        android:padding="20dp"
-        android:textSize="18sp"
-        android:id="@+id/CONTACT"
-        android:textColor="@android:color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true" />
+
 
 <!--Resources:-->
 <!--https://stackoverflow.com/questions/3496269/how-do-i-put-a-border-around-an-android-textview-->
