@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hartmetz.epk.EPK"
-    tools:ignore="HardcodedText" >
+    tools:ignore="contentDescription" >
 
     <ImageView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HEARTMEAT"
+        android:text="@string/band_name"
         android:paddingTop="5dp"
         android:paddingRight="20dp"
         android:paddingBottom="5dp"
@@ -58,7 +58,7 @@
                 android:id="@+id/SONGS"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="SONGS"
+                android:text="@string/songs_button"
                 android:layout_margin="5dp"
                 android:gravity="center" />
 
@@ -66,7 +66,7 @@
                 android:id="@+id/VIDEOS"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="VIDEOS"
+                android:text="@string/videos_button"
                 android:layout_margin="5dp" />
 
         </LinearLayout>
@@ -78,7 +78,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
             android:padding="15dp"
-            android:text="We are a band that plays super cool music! Started with the dynamic duo Frank Storey on guitar and Lilly Hartmetz on vocals and now has the wonderful addition of James Rios on bass. All songs are original. All songs are heartfelt."
+            android:text="@string/description"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
@@ -87,7 +87,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONTACT INFO\n\nsexauerfl@gmail.com\n757.903.9289\nhttps://www.facebook.com/Heartmeat\n1060 W Addison St, Chicago, IL 60613"
+        android:text="@string/contact_info"
         android:padding="20dp"
         android:textSize="18sp"
         android:id="@+id/CONTACT"
